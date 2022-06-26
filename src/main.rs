@@ -2,7 +2,12 @@ use std::env;
 use std::process;
 use minigrep::Config;
 
-fn main() { 
+fn main() {
+    
+    /*
+        Use: minigrep <query> <filename>
+    */
+    
     let config: Config = Config::new(env::args()).unwrap_or_else(|err|{
         eprintln!("Проблема при разборе аргументов: {}", err);
         process::exit(1);
